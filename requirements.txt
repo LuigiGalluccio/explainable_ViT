@@ -1,0 +1,15 @@
+# Core
+numpy
+torch>=1.13
+torchvision
+opencv-python
+Pillow
+matplotlib
+datasets
+scikit-learn
+
+# Hugging Face
+transformers==4.37.2
+accelerate==0.28.0
+
+# to install -> pip -r requirements.txt
