@@ -1,0 +1,31 @@
+{
+  "best_metric": 0.7756212964753628,
+  "best_model_checkpoint": "test-cifar-10/checkpoint-250",
+  "epoch": 1.0,
+  "eval_steps": 500,
+  "global_step": 250,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 1.0,
+      "eval_accuracy": 0.779,
+      "eval_f1_score": 0.7756212964753628,
+      "eval_loss": 0.7913366556167603,
+      "eval_runtime": 7.29,
+      "eval_samples_per_second": 137.175,
+      "eval_steps_per_second": 8.642,
+      "step": 250
+    }
+  ],
+  "logging_steps": 500,
+  "max_steps": 2500,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 10,
+  "save_steps": 500,
+  "total_flos": 1.9964875456512e+16,
+  "train_batch_size": 16,
+  "trial_name": null,
+  "trial_params": null
+}

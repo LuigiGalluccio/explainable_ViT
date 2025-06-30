@@ -35,9 +35,9 @@ This project fine-tunes a pre-trained Vision Transformer (ViT) for image classif
 ## 📊 Explainability Visualizations
 <table>
   <tr>
-    <td><img src="outputs/output_deer.png" width="300"></td>
-    <td><img src="outputs/output_dog.png" width="300"></td>
+    <td><img src="outputs/output_cat.png" width="300"></td>
     <td><img src="outputs/output_horse.png" width="300"></td>
+    <td><img src="outputs/output_plane.png" width="300"></td>
   </tr>
 </table>
 
