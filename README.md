@@ -27,7 +27,7 @@ This project fine-tunes a pre-trained Vision Transformer (ViT) for image classif
 ## 📈 Performance on CIFAR-10
 | Dataset  | Accuracy | F1 Score | Notes             |
 |----------|----------|----------|-------------------|
-| CIFAR-10 | 0.9265   | 0.9264   | Fine-tuned 10 epochs |
+| CIFAR-10 | 0.9492   | 0.9492   | Fine-tuned 3 epochs |
 
 ### Confusion Matrix
 ![](outputs/confusion_matrix.png)
