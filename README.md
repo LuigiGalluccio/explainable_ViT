@@ -8,7 +8,7 @@ This project fine-tunes a pre-trained Vision Transformer (ViT) for image classif
 * Explainability techniques applied to interpret model predictions.
 * Visualizations highlighting key features in input images.
 
-## 🧠 Model: Facebook DeiT-Tiny (Vision Transformer)
+## 🧠 Model
 
 ### Facebook DeiT-Tiny (Data-efficient Image Transformer)
 - **Description:** Lightweight ViT optimized for data efficiency and accuracy.
