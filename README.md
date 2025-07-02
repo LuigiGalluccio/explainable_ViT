@@ -4,30 +4,48 @@
 This project fine-tunes a pre-trained Vision Transformer (ViT) for image classification and integrates Explainable AI (XAI) methods to visualize the model's focus areas during inference. This helps increase transparency and trust in the model’s decisions.
 
 **Key features:**
-* Fine-tuning of Facebook DeiT-Tiny ViT.
+* Fine-tuning of Facebook DeiT-Tiny ViT and Google-base ViT
 * Explainability techniques applied to interpret model predictions.
 * Visualizations highlighting key features in input images.
 
-## 🧠 Model
+## 🧠 Models
 
 ### Facebook DeiT-Tiny (Data-efficient Image Transformer)
-- **Description:** Lightweight ViT optimized for data efficiency and accuracy.
-- **Architecture:** 12 Transformer layers, 3 attention heads, 192 embedding size, ~3M parameters.
+- **Description:** Lightweight ViT optimized for data efficiency and accuracy, actually more efficiently trained than ViT base.
+- **Architecture:** 12 Transformer layers, 3 attention heads, 192 embedding size, ~5.5M parameters.
 - **Input:** 224x224 pixels with 16x16 patches.
-- **Features:** Trained with knowledge distillation; supports attention map extraction.
-- **Pretrained on:** ImageNet-1k, then fine-tuned on CIFAR-10 and Food-101.
+- **Pretrained on:** ImageNet-1k. (1 million images, 1000 classes)
 - **Source:** https://huggingface.co/facebook/deit-tiny-patch16-224
 
+### Google Vision Transformer
+- **Description:** The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on a large collection of images in a supervised fashion, namely ImageNet-21k, at a resolution of 224x224 pixels.
+- **Architecture:** 12 Transformer layers, 12 attention heads, 768 embedding size, ~86M parameters.
+- **Input:** 224x224 pixels with 16x16 patches.
+- **Pretrained on:** ImageNet-21k. (14 million image, 21843 classes)
+- **Source:** https://huggingface.co/google/vit-base-patch16-224
+
 ## 📂 Datasets
-### CIFAR-10
+
+### Pretraining - ImageNet-1k
+- 1000 classes of 224x224 images.
+- 1,281,167 training / 50,000 validation / 100,000 test images.
+- https://www.cs.toronto.edu/~kriz/cifar.html
+
+### Pretraining - ImageNet-21k
+- 1000 classes of 224x224 images.
+- Split personalization
+- https://arxiv.org/pdf/2104.10972
+
+### Fine-tuning - CIFAR-10
 - 10 classes of 32x32 natural images.
 - 50,000 training / 10,000 test images.
-- [Dataset details](https://www.cs.toronto.edu/~kriz/cifar.html)
+- https://www.cs.toronto.edu/~kriz/cifar.html
 
-## 📈 Performance on CIFAR-10
-| Dataset  | Accuracy | F1 Score | Notes             |
-|----------|----------|----------|-------------------|
-| CIFAR-10 | 0.9492   | 0.9492   | Fine-tuned 3 epochs |
+## 📈 Performance
+| ViT model  | Accuracy | F1 Score | Notes             | Hardware used
+|----------|----------|----------|-------------------|-------------------|
+| facebook DeiT | 0.9492   | 0.9492   | Fine-tuned 3 epochs | Macbook Air M1 (16GB RAM)|
+| Google ViT | 0.9883   | 0.9883   | Fine-tuned 3 epochs | Mac Studio M1 Ultra (64GB RAM)|
 
 ### Confusion Matrix
 ![](outputs/confusion_matrix.png)
