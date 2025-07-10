@@ -26,17 +26,17 @@ This project fine-tunes a pre-trained Vision Transformer (ViT) for image classif
 
 ## 📂 Datasets
 
-### Pretraining - ImageNet-1k
+### ImageNet-1k (pre-training)
 - 1000 classes of 224x224 images.
 - 1,281,167 training / 50,000 validation / 100,000 test images.
 - https://www.cs.toronto.edu/~kriz/cifar.html
 
-### Pretraining - ImageNet-21k
+### ImageNet-21k (pre-training)
 - 1000 classes of 224x224 images.
 - Split personalization
 - https://arxiv.org/pdf/2104.10972
 
-### Fine-tuning - CIFAR-10
+### CIFAR-10 (fine-tuning)
 - 10 classes of 32x32 natural images.
 - 50,000 training / 10,000 test images.
 - https://www.cs.toronto.edu/~kriz/cifar.html
