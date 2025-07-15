@@ -1,7 +1,6 @@
 # .gitignore
 *.zip
 *.jpg
-*.png
 *.pt
 *.pth
 *.h5
