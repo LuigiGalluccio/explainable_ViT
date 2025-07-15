@@ -14,14 +14,14 @@ This project fine-tunes a pre-trained Vision Transformer (ViT) for image classif
 - **Description:** Lightweight ViT optimized for data efficiency and accuracy, actually more efficiently trained than ViT base.
 - **Architecture:** 12 Transformer layers, 3 attention heads, 192 embedding size, ~5.5M parameters.
 - **Input:** 224x224 pixels with 16x16 patches.
-- **Pretrained on:** ImageNet-1k. (1 million images, 1000 classes)
+- **Pretrained on:** ImageNet-1k (1 million images, 1000 classes)
 - **Source:** https://huggingface.co/facebook/deit-tiny-patch16-224
 
 ### Google Vision Transformer
 - **Description:** The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on a large collection of images in a supervised fashion, namely ImageNet-21k, at a resolution of 224x224 pixels.
 - **Architecture:** 12 Transformer layers, 12 attention heads, 768 embedding size, ~86M parameters.
 - **Input:** 224x224 pixels with 16x16 patches.
-- **Pretrained on:** ImageNet-21k. (14 million image, 21843 classes)
+- **Pretrained on:** ImageNet-21k (14 million image, 21843 classes)
 - **Source:** https://huggingface.co/google/vit-base-patch16-224
 
 ## 📂 Datasets
@@ -42,21 +42,42 @@ This project fine-tunes a pre-trained Vision Transformer (ViT) for image classif
 - https://www.cs.toronto.edu/~kriz/cifar.html
 
 ## 📈 Performance
-| ViT model  | Accuracy | F1 Score | Notes             | Hardware used
-|----------|----------|----------|-------------------|-------------------|
-| facebook DeiT | 0.9492   | 0.9492   | Fine-tuned 3 epochs | Macbook Air M1 (16GB RAM)|
-| Google ViT | 0.9883   | 0.9883   | Fine-tuned 3 epochs | Mac Studio M1 Ultra (64GB RAM)|
+| Model     | Accuracy | F1 Score | Loss | Notes | Hardware used
+|-------------|----------|----------|-------------------|-------------------|-------------------|
+| facebook DeiT | 0.9492   | 0.9492   | 0.1575 | Fine-tuned 3 epochs | Macbook Air M1 (16GB RAM)|
+| Google ViT    | 0.9883   | 0.9883   | 0.0388 | Fine-tuned 3 epochs | Mac Studio M1 Ultra (64GB RAM)|
 
 ### Confusion Matrix
-![](outputs/confusion_matrix.png)
+In order, the first confusion matrix corresponds to the test predictions of Facebook DeiT, while the second corresponds to those of Google ViT.
+<table>
+  <tr>
+    <td><img src="outputs/confusion_facebook.png" width="370"></td>
+    <td><img src="outputs/confusion_google.png" width="370"></td>
+  </tr>
+</table>
 
 ## 📊 Explainability Visualizations
 <table>
   <tr>
-    <td><img src="outputs/output_cat.png" width="300"></td>
-    <td><img src="outputs/output_horse.png" width="300"></td>
-    <td><img src="outputs/output_plane.png" width="300"></td>
+    <td><img src="outputs/output_cat.png" width="310"></td>
+    <td><img src="outputs/output_horse.png" width="310"></td>
+    <td><img src="outputs/output_plane.png" width="310"></td>
   </tr>
 </table>
 
 <img src="outputs/result_prob.png" width="380" alt="Prediction probabilities" />
+
+## Comparisons between models
+<table>
+  <tr>
+    <td><img src="outputs/bird_comparation.png" width="450"></td>
+    <td><img src="outputs/plane_comparation.png" width="450"></td>
+  </tr>
+  <tr>
+    
+  </tr>
+  <tr>
+    <td><img src="outputs/cat_comparation.png" width="450"></td>
+    <td><img src="outputs/dog_comparison.png" width="450"></td>
+  </tr>
+</table>
